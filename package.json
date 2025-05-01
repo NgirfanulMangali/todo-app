@@ -1,0 +1,23 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "The Todo App is a simple and intuitive web application designed to help users manage their daily tasks effectively. Users can add, delete, and mark tasks as completed, making it easier to stay organized and focused. The app emphasizes clean UI, responsive design, and minimalistic features to ensure a distraction-free user experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NgirfanulMangali/todo-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NgirfanulMangali/todo-app/issues"
+  },
+  "homepage": "https://github.com/NgirfanulMangali/todo-app#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.5",
+    "tailwindcss": "^4.1.5"
+  }
+}

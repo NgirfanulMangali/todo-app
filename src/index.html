@@ -6,58 +6,66 @@
     <title>TodoList</title>
     <link href="./output.css" rel="stylesheet">
 </head>
-<body class="text-[1.125rem] font-Josefin-Sans bg-Very-Dark-Blue bg-[url(/images/bg-mobile-dark.jpg)] bg-cover bg-no-repeat static">
-        
-            <div class="flex mt-15  justify-between items-center mx-13 ">
-                <h1 class="text-3xl font-bold text-white tracking-[15px]">TODO</h1>
-                <img src="/images/icon-sun.svg" alt="sun icon-sun">
-            </div>
-        
-            <div class="w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt rounded-[5px] flex items-center px-4 mt-15 mx-auto">
-                <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue"></div>
-                <input type="text" placeholder="create a new todo..." class="text-Light-Grayish-Blue-hover ml-5 focus:outline-none">
-            </div>
-            
-            <!--Result Input-->
-            <div class="absolute top-[240px] left-[25px]"> 
-                <div class="w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt rounded-t-lg flex px-4 break-all overflow-auto ">
-                        <div class="mt-3">
-                            <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue"></div>
-                        </div>
-                        <div class="mx-5">
-                            <p class="text-Light-Grayish-Blue-hover  mt-4">Lorem ipsum dolor sit amet </p>
-                        </div>
-                        <div class="flex items-center justify-center ml-auto">
-                            <button class="cursor-pointer w-[30px] h-[30px] flex items-center justify-center"><img src="/images/icon-cross.svg" alt="icon-cross" class=""></button>
-                        </div>
-                </div>
-                <div class="w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt  flex px-4 break-all overflow-auto border-y-1 border-Dark-Grayish-Blue">
-                    <div class="mt-3">
+<body class="text-[1.125rem] font-Josefin-Sans bg-Very-Dark-Blue ">
+                <div class="bg-[url(/images/bg-mobile-dark.jpg)] bg-cover bg-no-repeat bg-center w-full flex flex-col items-center justify-center">
+                    <!--TODO text and toggle icon-->
+                    <div class="flex mt-15  justify-between items-center mx-13 ">
+                        <h1 class="text-3xl font-bold text-white tracking-[15px]">TODO</h1>
+                        <img src="/images/icon-sun.svg" alt="sun icon-sun" class="animate-pulse">
+                    </div>
+                    <!--TODO Input-->
+                    <div class="w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt rounded-[5px] flex items-center px-4 mt-15 mx-auto">
                         <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue"></div>
-                    </div>
-                    <div class="mx-5">
-                        <p class="text-Light-Grayish-Blue-hover  mt-4">Lorem, ipsum dolor sit amet.<p>
-                    </div>
-                    <div class="flex items-center justify-center ml-auto">
-                        <button class="cursor-pointer w-[30px] h-[30px] flex items-center justify-center"><img src="/images/icon-cross.svg" alt="icon-cross" class=""></button>
-                    </div>
+                        <input type="text" placeholder="create a new todo..." class="text-Light-Grayish-Blue-hover ml-5 focus:outline-none" id="input">
+                    </div>;
                 </div>
-                <div class="w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt  flex justify-between px-4 rounded-b-lg text-Dark-Grayish-Blue ">
-                    <button class="cursor-pointer"><p>5 items left</p></button>
-                    <button class="cursor-pointer"><p>Clear Completed</p></button>
-                </div>
+            
+            <!--TODO List-->
 
-                <div class="w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt  flex items-center justify-center px-4 rounded mt-6">
-                   <div class="flex items-center px-4 text-Dark-Grayish-Blue gap-5">
-                    <button class="cursor-pointer"><p>All</p></button>
-                    <button class="cursor-pointer"><p>Active</p></button>
-                    <button class="cursor-pointer"><p>Completed</p></button>
-                   </div>
+                <div class=" absolute top-65 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt rounded-lg  ">
+                    <div id="result"> 
+                        <div class="w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt rounded-t-lg flex px-4 break-all overflow-auto border-b-1 border-Dark-Grayish-Blue">
+                                <div class="mt-3">
+                                    <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue"></div>
+                                </div>
+                                <div class="mx-5">
+                                    <p class="text-Light-Grayish-Blue-hover  mt-4">rrr </p>
+                                </div>
+                                <div class="flex items-center justify-center ml-auto">
+                                    <button class="cursor-pointer w-[30px] h-[30px] flex items-center justify-center"><img src="/images/icon-cross.svg" alt="icon-cross" class=""></button>
+                                </div>
+                        </div>
+                        <div class="w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt  flex px-4 break-all overflow-auto border-b-1 border-Dark-Grayish-Blue">
+                            <div class="mt-3">
+                                <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue"></div>
+                            </div>
+                            <div class="mx-5">
+                                <p class="text-Light-Grayish-Blue-hover  mt-4">Lorem, ipsum dolor sit amet.<p>
+                            </div>
+                            <div class="flex items-center justify-center ml-auto">
+                                <button class="cursor-pointer w-[30px] h-[30px] flex items-center justify-center"><img src="/images/icon-cross.svg" alt="icon-cross" class=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bawah">
+                        <div class="w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt  flex justify-between px-4 rounded-b-lg text-Dark-Grayish-Blue ">
+                            <p class="mt-4">5 items left</p>
+                            <button class="cursor-pointer"><p>Clear Completed</p></button>
+                        </div>
+
+                        <div class="w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt  flex items-center justify-center px-4 rounded mt-6">
+                        <div class="flex items-center px-4 text-Dark-Grayish-Blue gap-5">
+                            <button class="cursor-pointer"><p>All</p></button>
+                            <button class="cursor-pointer"><p>Active</p></button>
+                            <button class="cursor-pointer"><p>Completed</p></button>
+                        </div>
+                    </div>
+                
                 </div>
                 
-            </div>
+            
        
-
+<script src="/script/index.js"></script>
         
     
 </body>

@@ -4,7 +4,8 @@
 @theme {
     /* Light Theme */
     --color-Bright-Blue: hsl(220, 98%, 61%);
-    --color-linear-gradient: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    --color-young-blue: hsl(192, 100%, 67%);
+    --color-young-purple: hsl(280, 87%, 65%);
     --color-Very-Light-Gray: hsl(0, 0%, 98%);
     --color-Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
     --color-Light-Grayish-Blue: hsl(233, 11%, 84%);

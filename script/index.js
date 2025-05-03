@@ -27,6 +27,14 @@ document.getElementById("input").addEventListener('keydown', (e) => {
                     </div>
                 </div>`;
         });
+        let itemsLeft = 0;
+        saveData.forEach((item) => {
+            if (item !== "") {
+                itemsLeft++;
+            }
+        });
+
+        document.getElementById("items-left").innerHTML = `<p class="mt-4" id="items-left">${itemsLeft} items left</p>`;
 
         // Tambahkan event listener ke semua elemen dengan class "toMark"
         document.querySelectorAll(".toMark").forEach((circle) => {
@@ -49,3 +57,5 @@ function klikCircle(event) {
     const crossText = document.getElementById(`cross-${index}`);
     crossText.classList.add("line-through");
 }
+
+

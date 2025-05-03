@@ -227,11 +227,20 @@
   .top-40 {
     top: calc(var(--spacing) * 40);
   }
+  .top-45 {
+    top: calc(var(--spacing) * 45);
+  }
+  .top-48 {
+    top: calc(var(--spacing) * 48);
+  }
   .top-49 {
     top: calc(var(--spacing) * 49);
   }
   .top-50 {
     top: calc(var(--spacing) * 50);
+  }
+  .top-55 {
+    top: calc(var(--spacing) * 55);
   }
   .top-60 {
     top: calc(var(--spacing) * 60);
@@ -244,6 +253,9 @@
   }
   .top-80 {
     top: calc(var(--spacing) * 80);
+  }
+  .top-85 {
+    top: calc(var(--spacing) * 85);
   }
   .top-90 {
     top: calc(var(--spacing) * 90);
@@ -292,6 +304,33 @@
   }
   .left-5 {
     left: calc(var(--spacing) * 5);
+  }
+  .left-6 {
+    left: calc(var(--spacing) * 6);
+  }
+  .left-8 {
+    left: calc(var(--spacing) * 8);
+  }
+  .left-10 {
+    left: calc(var(--spacing) * 10);
+  }
+  .left-30 {
+    left: calc(var(--spacing) * 30);
+  }
+  .left-40 {
+    left: calc(var(--spacing) * 40);
+  }
+  .left-55 {
+    left: calc(var(--spacing) * 55);
+  }
+  .left-70 {
+    left: calc(var(--spacing) * 70);
+  }
+  .left-90 {
+    left: calc(var(--spacing) * 90);
+  }
+  .left-100 {
+    left: calc(var(--spacing) * 100);
   }
   .left-\[20px\] {
     left: 20px;

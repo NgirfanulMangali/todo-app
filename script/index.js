@@ -27,13 +27,13 @@ document.getElementById("input").addEventListener('keydown', (e) => {
                     </div>
                 </div>`;
         });
+        // increment items left
         let itemsLeft = 0;
         saveData.forEach((item) => {
             if (item !== "") {
                 itemsLeft++;
             }
         });
-
         document.getElementById("items-left").innerHTML = `<p class="mt-4" id="items-left">${itemsLeft} items left</p>`;
 
         // Tambahkan event listener ke semua elemen dengan class "toMark"
@@ -59,3 +59,22 @@ function klikCircle(event) {
 }
 
 
+document.getElementById("clearCompleted").addEventListener("click", () => {
+
+    const tasks = document.querySelectorAll("#result div");
+
+
+    tasks.forEach((task) => {
+        const textElement = task.querySelector("p");
+
+
+        if (textElement && textElement.classList.contains("line-through")) {
+            task.remove();
+        }
+    });
+
+
+    const itemsLeft = document.querySelectorAll("#result p:not(.line-through)").length;
+    document.getElementById("items-left").innerHTML = `<p class="mt-4" id="items-left">${itemsLeft} items left</p>`;
+
+});

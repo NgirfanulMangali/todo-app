@@ -13,17 +13,19 @@ document.getElementById("input").addEventListener('keydown', (e) => {
 
         saveData.forEach((item, index) => {
             listResult.innerHTML += `
-                 <div class="w-[450px] h-[60px]     bg-Very-Dark-Grayish-Blue-alt flex px-4 break-all overflow-auto border-b-1 border-Dark-Grayish-Blue remove">
-                                <div class="mt-3">
-                                    <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue toMark " data-index="${index}"></div>
-                                </div>
-                                <div class="mx-5">
-                                    <p class="text-Light-Grayish-Blue-hover  mt-4 " id="cross-${index}">${item} </p>
-                                </div>
-                                <div class="flex items-center justify-center ml-auto">
-                                    <button class="cursor-pointer w-[30px] h-[30px] flex items-center justify-center" ><img src="/images/icon-cross.svg" alt="icon-cross"></button>
-                                </div>
-                            </div>`;
+    <div class="remove w-[450px] h-[60px] bg-Very-Dark-Grayish-Blue-alt flex px-4 break-all overflow-auto border-b-1 border-Dark-Grayish-Blue">
+        <div class="mt-3">
+            <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue toMark" data-index="${index}"></div>
+        </div>
+        <div class="mx-5">
+            <p class="text-Light-Grayish-Blue-hover mt-4" id="cross-${index}">${item}</p>
+        </div>
+        <div class="flex items-center justify-center ml-auto">
+            <button class="cursor-pointer w-[30px] h-[30px] flex items-center justify-center buttonEraser">
+                <img src="/images/icon-cross.svg" alt="icon-cross">
+            </button>
+        </div>
+    </div>`;
         });
         // increment items left
         let itemsLeft = 0;
@@ -38,8 +40,24 @@ document.getElementById("input").addEventListener('keydown', (e) => {
         document.querySelectorAll(".toMark").forEach((circle) => {
             circle.addEventListener("click", klikCircle);
         });
+
+        //event listener for the buttonEraser
+        document.getElementById("result").addEventListener("click", (event) => {
+            if (event.target.closest(".buttonEraser")) {
+                const taskElement = event.target.closest(".remove"); // Cari elemen parent dengan class "remove"
+                if (taskElement) {
+                    taskElement.remove(); // Hapus elemen parent
+                    const itemsLeft = document.querySelectorAll("#result p.line-through").length;
+                    document.getElementById("items-left").innerHTML = `<p class="mt-4" id="items-left">${itemsLeft} items left</p>`;
+                }
+            }
+        });
     }
 });
+
+
+
+
 
 function klikCircle(event) {
     const circle = event.target;
@@ -114,3 +132,15 @@ document.getElementById("completed").addEventListener("click", () => {
     const itemsLeft = document.querySelectorAll("#result p.line-through").length;
     document.getElementById("items-left").innerHTML = `<p class="mt-4" id="items-left">${itemsLeft} items left</p>`;
 });
+
+document.getElementById("result").addEventListener("click", (event) => {
+    if (event.target.closest(".buttonEraser")) {
+        const taskElement = event.target.closest(".remove"); // Cari elemen parent dengan class "remove"
+        if (taskElement) {
+            taskElement.remove(); // Hapus elemen parent
+            const itemsLeft = document.querySelectorAll("#result p:not(.line-through)").length;
+            document.getElementById("items-left").innerHTML = `<p class="mt-4" id="items-left">${itemsLeft} items left</p>`;
+        }
+    }
+});
+

@@ -34,7 +34,7 @@ document.getElementById("input").addEventListener('keydown', (e) => {
                 itemsLeft++;
             }
         });
-        document.getElementById("items-left").innerHTML = `<p class="mt-4" id="items-left">${itemsLeft} items left</p>`;
+        document.getElementById("items-left").innerHTML = `<p class="mt-3" id="items-left">${itemsLeft} items left</p>`;
 
         // Tambahkan event listener ke semua elemen dengan class "toMark"
         document.querySelectorAll(".toMark").forEach((circle) => {
@@ -78,6 +78,7 @@ function klikCircle(event) {
 
 document.getElementById("clearCompleted").addEventListener("click", () => {
 
+
     const tasks = document.querySelectorAll("#result div");
     tasks.forEach((task) => {
         const textElement = task.querySelector("p");
@@ -94,6 +95,11 @@ document.getElementById("clearCompleted").addEventListener("click", () => {
 
 // Add event listener for "active" button
 document.getElementById("active").addEventListener("click", () => {
+
+    document.getElementById("active").classList.add("text-Bright-Blue");
+    document.getElementById("all").classList.remove("text-Bright-Blue");
+    document.getElementById("completed").classList.remove("text-Bright-Blue");
+
     document.querySelectorAll("#result div").forEach((task) => {
         const textElement = task.querySelector("p");
         if (textElement && textElement.classList.contains("line-through")) {
@@ -110,6 +116,11 @@ document.getElementById("active").addEventListener("click", () => {
 
 // Add event listener for "all" button
 document.getElementById("all").addEventListener("click", () => {
+
+
+    document.getElementById("all").classList.add("text-Bright-Blue");
+    document.getElementById("active").classList.remove("text-Bright-Blue");
+    document.getElementById("completed").classList.remove("text-Bright-Blue");
     document.querySelectorAll("#result div").forEach((task) => {
         task.style.display = "flex";
     });
@@ -120,6 +131,12 @@ document.getElementById("all").addEventListener("click", () => {
 
 // Add event listener for "completed" button
 document.getElementById("completed").addEventListener("click", () => {
+
+    document.getElementById("completed").classList.add("text-Bright-Blue");
+    document.getElementById("all").classList.remove("text-Bright-Blue");
+    document.getElementById("active").classList.remove("text-Bright-Blue");
+
+
     // Sembunyikan elemen tugas yang belum selesai
     document.querySelectorAll("#result div").forEach((task) => {
         const textElement = task.querySelector("p");

@@ -25,4 +25,7 @@
     --font-Josefin-Sans: 'Josefin Sans', sans-serif;
     --font-Weight-400: 400;
     --font-Weight-700: 700;
+
+
+    --breakpoint-2xl: 87.5rem;
 }

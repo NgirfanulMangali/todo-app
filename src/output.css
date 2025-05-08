@@ -8,10 +8,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-sky-500: oklch(68.5% 0.169 237.323);
-    --color-indigo-200: oklch(87% 0.065 274.039);
-    --color-indigo-700: oklch(45.7% 0.24 277.023);
-    --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
@@ -180,14 +176,8 @@
   .absolute {
     position: absolute;
   }
-  .top-60 {
-    top: calc(var(--spacing) * 60);
-  }
   .top-62 {
     top: calc(var(--spacing) * 62);
-  }
-  .top-65 {
-    top: calc(var(--spacing) * 65);
   }
   .left-1 {
     left: calc(var(--spacing) * 1);
@@ -195,41 +185,11 @@
   .left-1\/2 {
     left: calc(1/2 * 100%);
   }
-  .container {
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem;
-    }
-  }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
-  .mx-6 {
-    margin-inline: calc(var(--spacing) * 6);
-  }
   .mx-auto {
     margin-inline: auto;
-  }
-  .mt-0 {
-    margin-top: calc(var(--spacing) * 0);
-  }
-  .mt-1 {
-    margin-top: calc(var(--spacing) * 1);
-  }
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
   }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
@@ -239,9 +199,6 @@
   }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
-  }
-  .mt-9 {
-    margin-top: calc(var(--spacing) * 9);
   }
   .mt-15 {
     margin-top: calc(var(--spacing) * 15);
@@ -270,15 +227,6 @@
   .h-\[30px\] {
     height: 30px;
   }
-  .h-\[40px\] {
-    height: 40px;
-  }
-  .h-\[50px\] {
-    height: 50px;
-  }
-  .h-\[60px\] {
-    height: 60px;
-  }
   .w-\[1\.875rem\] {
     width: 1.875rem;
   }
@@ -290,30 +238,6 @@
   }
   .w-\[30px\] {
     width: 30px;
-  }
-  .w-\[40px\] {
-    width: 40px;
-  }
-  .w-\[300px\] {
-    width: 300px;
-  }
-  .w-\[350px\] {
-    width: 350px;
-  }
-  .w-\[400px\] {
-    width: 400px;
-  }
-  .w-\[430px\] {
-    width: 430px;
-  }
-  .w-\[440px\] {
-    width: 440px;
-  }
-  .w-\[450px\] {
-    width: 450px;
-  }
-  .w-\[460px\] {
-    width: 460px;
   }
   .w-full {
     width: 100%;
@@ -367,9 +291,6 @@
   .gap-45 {
     gap: calc(var(--spacing) * 45);
   }
-  .gap-50 {
-    gap: calc(var(--spacing) * 50);
-  }
   .overflow-auto {
     overflow: auto;
   }
@@ -409,9 +330,6 @@
   }
   .bg-Very-Dark-Grayish-Blue-alt {
     background-color: var(--color-Very-Dark-Grayish-Blue-alt);
-  }
-  .bg-sky-500 {
-    background-color: var(--color-sky-500);
   }
   .bg-linear-to-br {
     --tw-gradient-position: to bottom right;
@@ -486,31 +404,47 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
-  .hover\:text-Light-Grayish-Blue-hover {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-Light-Grayish-Blue-hover);
-      }
-    }
-  }
-  .hover\:not-focus\:bg-indigo-700 {
-    &:hover {
-      @media (hover: hover) {
-        &:not(*:focus) {
-          background-color: var(--color-indigo-700);
-        }
-      }
-    }
-  }
   .focus\:outline-none {
     &:focus {
       --tw-outline-style: none;
       outline-style: none;
     }
   }
-  .has-checked\:ring-indigo-200 {
-    &:has(*:checked) {
-      --tw-ring-color: var(--color-indigo-200);
+  .max-xl\:mx-auto {
+    @media (width < 80rem) {
+      margin-inline: auto;
+    }
+  }
+  .max-xl\:block {
+    @media (width < 80rem) {
+      display: block;
+    }
+  }
+  .max-xl\:w-\[90\%\] {
+    @media (width < 80rem) {
+      width: 90%;
+    }
+  }
+  .xl\:block {
+    @media (width >= 80rem) {
+      display: block;
+    }
+  }
+  .\32 xl\:block {
+    @media (width >= 87.5rem) {
+      display: block;
+    }
+  }
+  .\32 xl\:w-23 {
+    @media (width >= 87.5rem) {
+      width: calc(var(--spacing) * 23);
+    }
+  }
+  .\32 xl\:xl\:block {
+    @media (width >= 87.5rem) {
+      @media (width >= 80rem) {
+        display: block;
+      }
     }
   }
 }

@@ -16,12 +16,12 @@ document.getElementById("input").addEventListener('keydown', (e) => {
                                 <!-- List Result-->
 
      <div id="result">
-            <div class="remove w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt flex px-4 break-all overflow-auto border-b-1 border-Dark-Grayish-Blue">
+            <div class="remove w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt flex px-4 break-all overflow-auto border-b-1 border-Dark-Grayish-Blue dark">
                     <div class="mt-3">
-                        <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue toMark" data-index="${index}"></div>
+                        <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue toMark dark" data-index="${index}"></div>
                     </div>
                     <div class="mx-5">
-                        <p class="text-Light-Grayish-Blue-hover mt-4" id="cross-${index}">${item}</p>
+                        <p class="text-Light-Grayish-Blue-hover mt-4 texts" id="cross-${index}">${item}</p>
                     </div>
                     <div class="flex items-center justify-center ml-auto">
                         <button class="cursor-pointer w-[30px] h-[30px] flex items-center justify-center buttonEraser">
@@ -39,12 +39,12 @@ document.getElementById("input").addEventListener('keydown', (e) => {
         buttonText.innerHTML = ` <!-- Button Text-->
                     
        
-                        <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt  flex justify-between px-4 rounded-b-lg text-Dark-Grayish-Blue ">
+                        <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt  flex justify-between px-4 rounded-b-lg text-Dark-Grayish-Blue dark">
                             <p class="mt-3" id="items-left">5 items left</p>
                             <button class="cursor-pointer" id="clearCompleted"><p>Clear Completed</p></button>
                         </div>
                 
-                        <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt  flex items-center justify-center px-4 rounded mt-6">
+                        <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt  flex items-center justify-center px-4 rounded mt-6 dark">
                         <div class="flex items-center px-4 text-Dark-Grayish-Blue gap-5 ">
                             <button class="cursor-pointer" id="all"><p>All</p></button>
                             <button class="cursor-pointer" id="active"><p>Active</p></button>
@@ -198,6 +198,33 @@ document.getElementById("input").addEventListener('keydown', (e) => {
 
 });
 
+document.getElementById("toggleIcon").addEventListener("click", () => {
+    const body = document.body;
+    const toggleIcon = document.getElementById("toggleIcon");
+    body.classList.toggle("dark-mode");
 
+
+    if (body.classList.contains("dark-mode")) {
+        toggleIcon.src = "/images/icon-moon.svg";
+        document.getElementById("bg").style.backgroundImage = "url('/images/bg-mobile-light.jpg')";
+        body.style.backgroundColor = "hsl(0, 0%, 95%";
+
+        document.querySelectorAll(".dark").forEach((element) => {
+            element.style.backgroundColor = "hsl(0, 0%, 98%)";
+            element.style.boxShadow = "1px 1px 1px rgba(0, 0, 0, 0.1)";
+        });
+        document.querySelectorAll(".texts").forEach((element) => {
+            element.style.color = "hsl(233, 14%, 35%)";
+        });
+    } else {
+        toggleIcon.src = "/images/icon-sun.svg";
+        document.getElementById("bg").style.backgroundImage = "url('/images/bg-mobile-dark.jpg')";
+        body.style.backgroundColor = "hsl(235, 21%, 11%)";
+        document.querySelectorAll(".dark").forEach((element) => {
+            element.style.backgroundColor = "hsl(237, 14%, 26%)";
+        });
+
+    }
+});
 
 

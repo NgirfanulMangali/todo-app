@@ -7,15 +7,15 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 <body class="text-[1.125rem] font-Josefin-Sans bg-Very-Dark-Blue ">
-                <div class="bg-[url(/images/bg-mobile-dark.jpg)] bg-cover bg-no-repeat bg-center w-full flex flex-col justify-between items-center ">
+                <div class="bg-[url(/images/bg-mobile-dark.jpg)] bg-cover bg-no-repeat bg-center w-full flex flex-col justify-between items-center " id="bg">
                     <!--TODO text and toggle icon-->
                     <div class="flex mt-15  items-center justify-center gap-45">
                         <h1 class="text-3xl font-bold text-white tracking-[15px]">TODO</h1>
-                        <img src="/images/icon-sun.svg" alt="sun icon-sun" class="animate-pulse">
+                        <img src="/images/icon-sun.svg" alt="sun icon-sun" class="animate-pulse" id="toggleIcon">
                     </div>
                     <!--TODO Input-->
-                    <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt rounded-[5px] flex items-center px-4 mt-15 mx-auto">
-                        <div class="w-[1.875rem] h-[1.875rem] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue"></div>
+                    <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt rounded-[5px] flex items-center px-4 mt-15 mx-auto dark ">
+                        <div class="w-[1.875rem] h-[1.875rem] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue dark"></div>
                         <input type="text" placeholder="create a new todo..." class="text-Light-Grayish-Blue-hover ml-5 focus:outline-none" id="input">
                     </div>;
                 </div>
@@ -24,26 +24,26 @@
 
                 <div class=" bg-Very-Dark-Grayish-Blue-alt rounded-lg w-[21.875rem] h-[3.125rem] absolute top-62 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
                     <div id="result"> 
-                            <div class="w-[21.875rem] h-[3.125rem]    bg-Very-Dark-Grayish-Blue-alt flex px-4 break-all overflow-auto border-b-1 border-Dark-Grayish-Blue remove">
+                            <div class="w-[21.875rem] h-[3.125rem]    bg-Very-Dark-Grayish-Blue-alt flex px-4 break-all overflow-auto border-b-1 border-Dark-Grayish-Blue remove dark">
                                 <div class="mt-3">
-                                    <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue to-mark "></div>
+                                    <div class="w-[30px] h-[30px] rounded-full bg-Very-Dark-Grayish-Blue-alt border-[1px] border-Dark-Grayish-Blue to-mark dark"></div>
                                 </div>
                                 <div class="mx-5">
-                                    <p class="text-Light-Grayish-Blue-hover  mt-4 " id="crossOut">rrr </p>
+                                    <p class="text-Light-Grayish-Blue-hover  mt-4 texts" id="crossOut">rrr </p>
                                 </div>
                                 <div class="flex items-center justify-center ml-auto">
                                     <button class="cursor-pointer w-[30px] h-[30px] flex items-center justify-center " id="buttonEraser"><img src="/images/icon-cross.svg" alt="icon-cross"></button>
                                 </div>
                             </div>
                         
-                            <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt  flex px-4 break-all overflow-auto  border-b-1 border-Dark-Grayish-Blue ">
+                            <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt  flex px-4 break-all overflow-auto  border-b-1 border-Dark-Grayish-Blue dark">
                                 <div class="mt-3">
                                     <div class="w-[30px] h-[30px] rounded-full bg-linear-to-br from-young-blue to-young-purple  flex items-center justify-center">
                                         <img src="/images/icon-check.svg" alt="icon-check" class="w-[14px] h-[12px]">
                                     </div>
                                 </div>
                                 <div class="mx-5">
-                                    <p class="text-Light-Grayish-Blue-hover  mt-4 line-through">Lorem, ipsum dolor sit amet.<p>
+                                    <p class="text-Light-Grayish-Blue-hover  mt-4 line-through texts">Lorem, ipsum dolor sit amet.<p>
                                 </div>
                                 <div class="flex items-center justify-center ml-auto">
                                     <button class="cursor-pointer w-[30px] h-[30px] flex items-center justify-center "><img src="/images/icon-cross.svg" alt="icon-cross" class=""></button>
@@ -52,12 +52,12 @@
                     </div>
                     <!--TODO List end-->
                    <div id="a-group-of-buttons">
-                        <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt  flex justify-between px-4 rounded-b-lg text-Dark-Grayish-Blue ">
+                        <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt  flex justify-between px-4 rounded-b-lg text-Dark-Grayish-Blue dark">
                             <p class="mt-3" id="items-left">5 items left</p>
                             <button class="cursor-pointer" id="clearCompleted"><p>Clear Completed</p></button>
                         </div>
                 
-                        <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt  flex items-center justify-center px-4 rounded mt-6">
+                        <div class="w-[21.875rem] h-[3.125rem] bg-Very-Dark-Grayish-Blue-alt  flex items-center justify-center px-4 rounded mt-6 dark">
                         <div class="flex items-center px-4 text-Dark-Grayish-Blue gap-5 ">
                             <button class="cursor-pointer" id="all"><p>All</p></button>
                             <button class="cursor-pointer" id="active"><p>Active</p></button>
